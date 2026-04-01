@@ -14,18 +14,20 @@
 
 ---
 
-## 📽️ The "Master Class" Workflow (8-Step Guide)
+## 📽️ CapBugger Master Class (10-Step Pro Workflow)
 
-Follow these steps to master project isolation and version control:
+Follow these exact steps to ensure 4K export availability and version consistency:
 
-1. **Isolation**: Move your desired project folder out of the default CapCut directory.
-2. **Metadata Check**: Verify the `draft_meta.info` file exists in the folder.
-3. **Open CapBugger**: Launch the application as Administrator.
-4. **Kill CapCut**: Use the **Process Killer** to ensure no instances are running.
-5. **Path Selection**: Use the **Project Copier** to move the project to its new permanent home.
-6. **Apply Lock**: Navigate to **Version Locker** and lock the project metadata.
-7. **Launch CapCut**: Start CapCut and verify the project appears in the list.
-8. **Confirmation**: Ensure the version number remains consistent and no auto-update was triggered.
+1. **Setup**: If you don't have the CapCut installer, use CapBugger to install it.
+2. **Legacy Install**: Navigate to the **Version Locker** page and select **"Install from Legacy"** (contains official CapCut packages).
+3. **Version Locking**: Open CapBugger and press **"Lock Current Version"**. This prevents auto-updates and preserves 4K export as a pro feature.
+4. **Initialization**: Activate your VPN and then launch CapCut.
+5. **Editing**: After completing your edit, select all clips, right-click, and choose **"Create Compound Clip"**.
+6. **Reprocessing**: Right-click the selected compound clip and select **"Reprocess"**.
+7. **Process Control**: Return to CapBugger and press the **Kill Icon** (located next to the Lock Version button).
+8. **File Sync**: Go to the **Copy Files** section, select your CapCut installation folder (Default: C:\), click **Scan**, and then **Copy**.
+9. **Asset Replacement**: In CapCut, right-click the compound clip, select **"Replace Footage"**, navigate to the `Downloads/CapCut Files` folder, and select the first file.
+10. **Final Export**: Click **Export** and you are done!
 
 ---
 

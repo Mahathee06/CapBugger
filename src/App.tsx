@@ -109,7 +109,12 @@ const App: React.FC = () => {
                 <div className="flex items-center gap-2 text-indigo-400 mb-4 px-2 py-1 bg-indigo-400/10 w-fit rounded-full text-xs font-semibold uppercase tracking-wider">
                   <Shield size={14} /> SECURITY MODULE
                 </div>
-                <h1 className="text-3xl font-bold mb-6">Version Locker</h1>
+                <div className="flex justify-between items-end mb-6">
+                  <h1 className="text-3xl font-bold">Version Locker</h1>
+                  <button className="flex items-center gap-2 text-xs text-slate-500 hover:text-indigo-400 transition-colors bg-white/5 px-3 py-2 rounded-lg border border-white/5">
+                    <HardDrive size={14} /> Install from Legacy (Official)
+                  </button>
+                </div>
                 <div className="glass p-8 space-y-6">
                    <div className="flex flex-col gap-4">
                       <label className="text-xs uppercase tracking-widest text-slate-500 font-bold">Select Project Path</label>
@@ -122,9 +127,18 @@ const App: React.FC = () => {
                    <div className="flex justify-between items-center bg-indigo-500/5 p-6 rounded-2xl border border-indigo-500/10">
                       <div>
                         <h3 className="font-bold mb-1">State: Unlocked</h3>
-                        <p className="text-sm text-slate-400">Locking protects your project from being modified by CapCut.</p>
+                        <p className="text-sm text-slate-400">Locking protects your project from being modified by CapCut auto-updates.</p>
                       </div>
-                      <button className="glow-btn">LOCK PROJECT</button>
+                      <div className="flex items-center gap-3">
+                        <button 
+                          onClick={killCapCut}
+                          className="p-3 bg-red-400/10 text-red-400 rounded-xl hover:bg-red-400/20 transition-all border border-red-400/20"
+                          title="Kill Current Process"
+                        >
+                          <XCircle size={24} />
+                        </button>
+                        <button className="glow-btn px-10">LOCK CURRENT VERSION</button>
+                      </div>
                    </div>
                 </div>
               </div>
@@ -142,20 +156,23 @@ const App: React.FC = () => {
                 <div className="flex items-center gap-2 text-emerald-400 mb-4 px-2 py-1 bg-emerald-400/10 w-fit rounded-full text-xs font-semibold uppercase tracking-wider">
                   <Copy size={14} /> PORTABILITY MODULE
                 </div>
-                <h1 className="text-3xl font-bold mb-6">Project Copier</h1>
+                <h1 className="text-3xl font-bold mb-6">Copy Files & Scan</h1>
                 <div className="glass p-8 space-y-6">
                    <div className="grid grid-cols-2 gap-8">
                      <div className="space-y-4">
-                        <label className="text-xs uppercase tracking-widest text-slate-500 font-bold">Source Directory</label>
-                        <input type="text" placeholder="Draft location..." className="w-full bg-black/40 border border-white/10 p-3 rounded-lg text-sm" />
+                        <label className="text-xs uppercase tracking-widest text-slate-500 font-bold">CapCut Installation Folder (Default: C:\)</label>
+                        <div className="flex gap-2">
+                           <input type="text" placeholder="C:\Users\...\CapCut" className="flex-1 bg-black/40 border border-white/10 p-3 rounded-lg text-sm" />
+                           <button className="bg-white/10 px-4 rounded-lg text-xs font-bold hover:bg-white/20 transition-all">SCAN</button>
+                        </div>
                      </div>
                      <div className="space-y-4">
-                        <label className="text-xs uppercase tracking-widest text-slate-500 font-bold">Destination Directory</label>
-                        <input type="text" placeholder="Copy to..." className="w-full bg-black/40 border border-white/10 p-3 rounded-lg text-sm" />
+                        <label className="text-xs uppercase tracking-widest text-slate-500 font-bold">Destination (Downloads\CapCut Files)</label>
+                        <input type="text" placeholder="Downloads\CapCut Files" className="w-full bg-black/40 border border-white/10 p-3 rounded-lg text-sm" />
                      </div>
                    </div>
                    <button className="w-full bg-emerald-600/20 hover:bg-emerald-600/30 border border-emerald-600/30 py-4 rounded-xl text-emerald-400 font-bold transition-all mt-4 flex items-center justify-center gap-3">
-                     <Zap size={18} className="fill-emerald-400" />
+                     <Copy size={18} className="fill-emerald-400" />
                      INITIALIZE COPY OPERATION
                    </button>
                 </div>
